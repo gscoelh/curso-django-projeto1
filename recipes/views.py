@@ -4,7 +4,9 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):  
-    return HttpResponse('home')
+    return render(request, 'recipes/home.html',context={
+        'name':'mostra como passa por parametro no render'
+    })
 
 
 def sobre(request):
@@ -12,4 +14,4 @@ def sobre(request):
 
         
 def contato(request):
-    return HttpResponse('contato')
+    return render(request ,'temp/temp.html')
